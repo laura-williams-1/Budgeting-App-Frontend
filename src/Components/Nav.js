@@ -1,3 +1,8 @@
 export default function Nav() {
-  return <div></div>;
+  return (
+    <nav>
+      <h1>Budgeting App</h1>
+      <button>New Transaction</button>
+    </nav>
+  );
 }
