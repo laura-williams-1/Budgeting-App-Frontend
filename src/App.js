@@ -1,6 +1,6 @@
 import "./App.css";
 import Nav from "./Components/Nav";
-import Transaction from "./Components/Transaction";
+import Transaction from "./Components/Transactions";
 import Index from "./Components/Index";
 import { Routes, Route } from "react-router-dom";
 
