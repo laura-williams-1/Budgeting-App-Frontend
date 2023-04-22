@@ -10,10 +10,11 @@ const Transaction = () => {
   useEffect(() => {
     axios
       .get(`${API}/transactions/${id}`)
-      .then((res) => setTransactions(res.data))
+      .then((res) => setTransaction(res.data))
+
       .catch(() => navigate("/not-found"));
   }, [id, navigate]);
-
+  console.log(transaction);
   const delteHandler = () => {
     axios
       .delete(`${API}/transactions/${id}`)
@@ -24,7 +25,12 @@ const Transaction = () => {
   };
   return (
     <div>
-      <h1>Hello</h1>
+      Transaction
+      <h1>{transaction.item_name}</h1>
+      <td>{transaction.date}</td>
+      <td>{transaction.item_name}</td>
+      <td>{transaction.amount}</td>
+      <td>{transaction.category}</td>
     </div>
   );
 };
