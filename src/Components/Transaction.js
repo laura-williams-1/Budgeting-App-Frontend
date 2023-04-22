@@ -15,7 +15,8 @@ const Transaction = () => {
       .catch(() => navigate("/not-found"));
   }, [id, navigate]);
   console.log(transaction);
-  const delteHandler = () => {
+
+  const deleteHandler = () => {
     axios
       .delete(`${API}/transactions/${id}`)
       .then(() => {
@@ -24,13 +25,28 @@ const Transaction = () => {
       .catch((err) => console.log(err));
   };
   return (
-    <div>
-      Transaction
+    <div className="transaction-card">
       <h1>{transaction.item_name}</h1>
-      <td>{transaction.date}</td>
-      <td>{transaction.item_name}</td>
-      <td>{transaction.amount}</td>
-      <td>{transaction.category}</td>
+      <h3>{transaction.date}</h3>
+
+      <h3>{transaction.amount}</h3>
+      <h3>{transaction.category}</h3>
+      <div>
+        {" "}
+        <Link to={`/transactions`}>
+          <button>Home</button>
+        </Link>
+      </div>
+      <div>
+        {" "}
+        <Link to={`/transactions/${id}/edit`}>
+          <button>Edit</button>
+        </Link>
+      </div>
+      <div>
+        {" "}
+        <button onClick={deleteHandler}>Delete</button>
+      </div>
     </div>
   );
 };

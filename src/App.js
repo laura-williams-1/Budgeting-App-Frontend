@@ -3,7 +3,6 @@ import Nav from "./Components/Nav";
 import Transaction from "./Components/Transaction";
 import Index from "./Components/HomePage/Index";
 import { Routes, Route } from "react-router-dom";
-import Transactions from "./Components/HomePage/Transactions";
 
 function App() {
   return (
