@@ -1,8 +1,6 @@
 const Transactions = ({ Transactions }) => {
   return (
     <>
-      {/* <h1>Bank Account Total {totalAmount}</h1> */}
-      {/* <tbody> */}
       {Transactions.map((transaction) => {
         return (
           <tr key={transaction.id}>
@@ -13,7 +11,6 @@ const Transactions = ({ Transactions }) => {
           </tr>
         );
       })}
-      {/* </tbody> */}
     </>
   );
 };

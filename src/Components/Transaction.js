@@ -24,10 +24,20 @@ const Transaction = () => {
       })
       .catch((err) => console.log(err));
   };
+  function formatDate(dateString) {
+    const date = new Date(dateString);
+    const year = date.getFullYear();
+    const month = new Intl.DateTimeFormat("en-US", { month: "long" }).format(
+      date
+    );
+    const day = date.getDate();
+    return `${month} ${day}, ${year}`;
+  }
+
   return (
     <div className="transaction-card">
       <h1>{transaction.item_name}</h1>
-      <h3>{transaction.date}</h3>
+      <h3>{formatDate(transaction.date)}</h3>
 
       <h3>{transaction.amount}</h3>
       <h3>{transaction.category}</h3>

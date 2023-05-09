@@ -1,5 +1,5 @@
 import { useStat, useEffect } from "react";
-import {useParams} 
+// import {useParams}
 const NewTransaction = () => {
   const [NewTransaction, setNewTransaction] = useState([]);
 

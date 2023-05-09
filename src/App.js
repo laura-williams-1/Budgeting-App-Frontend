@@ -11,7 +11,7 @@ function App() {
       <Routes>
         <Route path="/transactions" element={<Index />} />
 
-        <Route path="/transactions" element={<Transaction />} />
+        <Route path="/transactions/:id" element={<Transaction />} />
       </Routes>
     </div>
   );
